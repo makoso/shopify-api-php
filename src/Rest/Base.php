@@ -366,7 +366,12 @@ abstract class Base extends \stdClass
         }
     }
 
-    private static function dataDiff(array $data1, array $data2): array
+    public function getOriginalState(): array
+    {
+        return $this->originalState;
+    }
+
+    public static function dataDiff(array $data1, array $data2): array
     {
         $diff = array();
 
